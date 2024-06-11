@@ -1,4 +1,4 @@
-var aleatório = Math.floor(Math.random() * 100);
+var aleatório = Math.floor(Math.random() * 100 + 100);
 
 console.log(
   "____Bem vindo ao jogo de adivinhação de Game Of Thrones, hora de testar quão bom seus instintos são!!____"
@@ -15,7 +15,7 @@ process.stdin.on("data", function (data) {
   palpite = Number(data.toString().trim());
   if (palpite == aleatório) {
     console.log(
-      "E...E...EXATOO!! Você acertou!\n Valar Dohaeris, obrigado por jogar!"
+      "E...E...EXATOO!! Você acertou e agora é o únioco e verdadeiro herdeiro do Trono de Ferro!\n Valar Dohaeris, obrigado por jogar!"
     );
     process.exit();
   } else {
@@ -48,7 +48,7 @@ process.stdin.on("data", function (data) {
       console.log(
         "O Jogo dos Tronos foi embaralhado novamente; começe uma nova adivinhação..."
       );
-      aleatório = Math.floor(Math.random() * 100);
+      aleatório = Math.floor(Math.random() * 100 + 100);
       
       tentativas = 5;
     }
